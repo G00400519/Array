@@ -40,7 +40,12 @@ public class ArrayDemo {
 
         Scanner myScan = new Scanner(System.in);
 
-        System.out.println("Please enter a number: ");
-        anArray[10] = myScan.nextInt();
+        try {
+            System.out.println("Please enter a number: ");
+            anArray[10] = myScan.nextInt();
+        }
+       catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("We went outside our allocated memory block");
+       }
     }
 }
